@@ -2,7 +2,7 @@ using DevsMedia.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace DevsMedia.Web.Controllers
+namespace DevsMedia.Web.Areas.User.Controllers
 {
     public class HomeController : Controller
     {

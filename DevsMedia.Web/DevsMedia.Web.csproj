@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DevsMedia.DataAccess\DevsMedia.DataAccess.csproj" />
     <ProjectReference Include="..\DevsMedia.Models\DevsMedia.Models.csproj" />
     <ProjectReference Include="..\DevsMedia.Utility\DevsMedia.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
   </ItemGroup>
 
 </Project>
