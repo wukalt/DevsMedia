@@ -1,6 +1,6 @@
 ﻿namespace DevsMedia.DataAccess.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
         IBlogRepository Blog { get; }
         IBookRepository Book { get; }

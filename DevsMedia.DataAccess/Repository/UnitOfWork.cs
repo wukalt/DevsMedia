@@ -21,7 +21,5 @@ namespace DevsMedia.DataAccess.Repository
         }
 
         public async Task Commit() => await _context.SaveChangesAsync();
-
-        public void Dispose() => _context.Dispose();
     }
 }
