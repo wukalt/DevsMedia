@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DevsMedia.Web.styles.css" asp-append-version="true" />
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> @*Bootstrap Theme (main theme)*@
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan+2" rel="stylesheet"> @*Font*@
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-toggleable-sm navbar-light border-bottom box-shadow navbar-expand-sm bg-dark mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="User" asp-controller="Home" asp-action="Index">DevsMedia.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <a class="navbar-brand text-white" asp-controller="Home" asp-action="Index">دومدیا</a>
+                <button class="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="User" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">خانه</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="User" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">بلاگ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">کتاب</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">انجمن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Privacy">قوانین</a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +51,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - DevsMedia.Web - <a asp-area="User" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 -  تمامی حقوق متعلق به دومدیا میباشد.
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

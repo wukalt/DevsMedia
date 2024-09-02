@@ -1,9 +1,8 @@
-using DevsMedia.DataAccess.Interfaces;
 using DevsMedia.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace DevsMedia.Web.Areas.User.Controllers
+namespace DevsMedia.Web.Controllers
 {
     public class HomeController : Controller
     {
