@@ -8,7 +8,6 @@ namespace DevsMedia.DataAccess.Interfaces
         Task<T> GetAsync(Expression<Func<T, bool>> filter);
         Task Add(T entity);
         Task Remove(T entity);
-        void Test();
 
         //IEnumerable<T> GetAll();
         //T Get(Expression<Func<T, bool>> filter);

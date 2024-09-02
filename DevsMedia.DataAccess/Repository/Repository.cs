@@ -39,10 +39,5 @@ namespace DevsMedia.DataAccess.Repository
             query = query.Where(filter);
             return await query.FirstOrDefaultAsync();
         }
-
-        public void Test()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
