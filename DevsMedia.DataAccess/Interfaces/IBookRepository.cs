@@ -2,8 +2,8 @@
 
 namespace DevsMedia.DataAccess.Interfaces
 {
-    public interface IBlogRepository
+    public interface IBookRepository
     {
-        Task Update(Blog blog);
+        Task Update(Book book);
     }
 }
