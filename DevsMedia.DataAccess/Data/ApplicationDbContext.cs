@@ -13,5 +13,6 @@ namespace DevsMedia.DataAccess.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
