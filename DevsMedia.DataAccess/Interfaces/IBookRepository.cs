@@ -2,7 +2,7 @@
 
 namespace DevsMedia.DataAccess.Interfaces
 {
-    public interface IBookRepository
+    public interface IBookRepository : IRepository<Book>
     {
         Task Update(Book book);
     }

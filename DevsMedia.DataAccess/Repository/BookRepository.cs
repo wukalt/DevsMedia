@@ -4,11 +4,11 @@ using DevsMedia.Models;
 
 namespace DevsMedia.DataAccess.Repository
 {
-    public class BookRepository : IBookRepository
+    public class BookRepository : Repository<Book>, IBookRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public BookRepository(ApplicationDbContext context)
+        public BookRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }
