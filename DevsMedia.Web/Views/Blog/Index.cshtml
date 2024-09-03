@@ -1,1 +1,36 @@
-﻿<h1>Blog</h1>
+﻿@model IEnumerable<Blog>
+@using DevsMedia.Utility.Convertors
+
+<div class="container">
+    <header>
+        <div class="row">
+            <div class="col-6 col-md-9">
+                <h2 class="text-primary">لیست بلاگ ها</h2>
+            </div>
+            <div class="col-6 col-md-3 text-end">
+                <input class="btn btn-primary" />@*this should be search box*@
+            </div>
+        </div>
+        <hr />
+    </header>
+    <div class="row">
+        @foreach (Blog blog in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="@blog.CoverImage" alt="@blog.Title">
+                    <div class="card-body">
+                        <p class="card-text">@blog.ShortDescription</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</button>
+                            </div>
+                            <small class="text-muted">@blog.ReleaseTime.ConvertToShamsi()</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

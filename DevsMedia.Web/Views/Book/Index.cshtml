@@ -1,6 +1,19 @@
 ﻿@model IEnumerable<Book>
+@using DevsMedia.Utility.Convertors
 
 <div class="container">
+    <header>
+        <div class="row">
+            <div class="col-6 col-md-9">
+                <h2 class="text-primary">لیست کتاب ها</h2>
+            </div>
+            <div class="col-6 col-md-3 text-end">
+                <input class="btn btn-primary" />@*this should be search box*@
+            </div>
+        </div>
+        <hr />
+    </header>
+
     <div class="row">
         @foreach (Book book in Model)
         {
@@ -14,7 +27,7 @@
                                 <button type="button" class="btn btn-sm btn-outline-secondary">دانلود</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</button>
                             </div>
-                            <small class="text-muted">9 mins</small>
+                            <small class="text-muted">@book.ReleaseTime.ConvertToShamsi()</small>
                         </div>
                     </div>
                 </div>
