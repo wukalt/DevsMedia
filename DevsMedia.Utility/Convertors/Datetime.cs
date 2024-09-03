@@ -4,7 +4,7 @@ namespace DevsMedia.Utility.Convertors
 {
     public static class Datetime
     {
-        public static DateTime ConvertToShamsi(this DateTime dateTime)
+        public static string ConvertToShamsi(this DateTime dateTime)
         {
             PersianCalendar persianCalendar = new PersianCalendar();
             
@@ -12,7 +12,7 @@ namespace DevsMedia.Utility.Convertors
             int month = persianCalendar.GetMonth(dateTime);
             int year = persianCalendar.GetYear(dateTime);
 
-            return new DateTime(year, month, day);
+            return $"{year}/{month.ToString("00")}/{day.ToString("00")}";
         }
     }
 }
