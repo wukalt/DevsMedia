@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevsMedia.Web", "DevsMedia.Web\DevsMedia.Web.csproj", "{A46C1D5E-B0CF-4B8F-8C7D-31C52C21ADFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevsMedia.Web", "DevsMedia.Web\DevsMedia.Web.csproj", "{A46C1D5E-B0CF-4B8F-8C7D-31C52C21ADFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevsMedia.Models", "DevsMedia.Models\DevsMedia.Models.csproj", "{5D2D1A10-D0EF-4959-9D0C-A9FCFC908327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevsMedia.Models", "DevsMedia.Models\DevsMedia.Models.csproj", "{5D2D1A10-D0EF-4959-9D0C-A9FCFC908327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevsMedia.Utility", "DevsMedia.Utility\DevsMedia.Utility.csproj", "{218DE2FE-CEE3-42BB-8595-9331681104A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevsMedia.Utility", "DevsMedia.Utility\DevsMedia.Utility.csproj", "{218DE2FE-CEE3-42BB-8595-9331681104A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevsMedia.DataAccess", "DevsMedia.DataAccess\DevsMedia.DataAccess.csproj", "{3CA5823A-9491-490E-9993-149737C17133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevsMedia.DataAccess", "DevsMedia.DataAccess\DevsMedia.DataAccess.csproj", "{3CA5823A-9491-490E-9993-149737C17133}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
