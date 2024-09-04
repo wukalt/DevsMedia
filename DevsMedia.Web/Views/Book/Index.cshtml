@@ -3,22 +3,26 @@
 
 <div class="container">
     <header>
-        <div class="row">
-            <div class="col-6 col-md-9">
-                <h2 class="text-primary">لیست کتاب ها</h2>
+        <div class="row pb-2">
+            <h2 class="text-primary text-center">لیست کتاب ها</h2>
+        </div>
+        <div class="row pb-4">
+            <div class="col-11">
+                <input class="form-control text-primary text-center shadow" style="border-radius: 30px; width: 100%" placeholder="کتاب مورد نظر خود را جستجو کنید.">
             </div>
-            <div class="col-6 col-md-3 text-end">
-                <input class="btn btn-primary" />@*this should be search box*@
+            <div class="col-1">
+                <button class="btn btn-primary form-control btn-group" style="width:10%; border-radius:25px;"><i class="bi bi-search"></i></button>
             </div>
         </div>
         <hr />
+        <br />
     </header>
 
     <div class="row">
         @foreach (Book book in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
+                <div class="card mb-5 box-shadow" style="width: 250px;">
                     <img class="card-img-top" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
                         <p class="card-text">@book.ShortDescription</p>
@@ -27,7 +31,6 @@
                                 <button type="button" class="btn btn-sm btn-outline-secondary">دانلود</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</button>
                             </div>
-                            <small class="text-muted">@book.ReleaseTime.ConvertToShamsi()</small>
                         </div>
                     </div>
                 </div>
