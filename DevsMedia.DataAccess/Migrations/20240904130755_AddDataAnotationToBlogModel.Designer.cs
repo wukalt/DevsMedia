@@ -4,6 +4,7 @@ using DevsMedia.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevsMedia.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240904130755_AddDataAnotationToBlogModel")]
+    partial class AddDataAnotationToBlogModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,7 +90,7 @@ namespace DevsMedia.DataAccess.Migrations
                             Id = 1,
                             BlogText = "SOLID که متشکل از 5 اصل است در برنامه نویسی  بهتر کمک میکمند",
                             CoverImage = "null for now",
-                            ReleaseTime = new DateTime(2024, 9, 5, 0, 26, 48, 312, DateTimeKind.Local).AddTicks(6296),
+                            ReleaseTime = new DateTime(2024, 9, 4, 16, 37, 54, 859, DateTimeKind.Local).AddTicks(7652),
                             ShortDescription = "SOLID که متشکل از 5 اصل است در برنامه نویسی  بهتر کمک میکمند",
                             Title = "چگونه در سی شارپ SOLID را پیاده سازی کنیم"
                         },
@@ -96,7 +99,7 @@ namespace DevsMedia.DataAccess.Migrations
                             Id = 2,
                             BlogText = "async await که متشک  بهتر کمک میکمند",
                             CoverImage = "null for now",
-                            ReleaseTime = new DateTime(2024, 9, 5, 0, 26, 48, 312, DateTimeKind.Local).AddTicks(6298),
+                            ReleaseTime = new DateTime(2024, 9, 4, 16, 37, 54, 859, DateTimeKind.Local).AddTicks(7655),
                             ShortDescription = "SOLID که متشکل از 5 اصل است در برنامه نویسی  بهتر کمک میکمند",
                             Title = "Asyncronous را پیاده سازی کنیم"
                         });
@@ -133,7 +136,7 @@ namespace DevsMedia.DataAccess.Migrations
                         {
                             Id = 1,
                             CoverImage = "https://content.packt.com/_/image/original/B19586/cover_image_large.jpg",
-                            ReleaseTime = new DateTime(2024, 9, 5, 0, 26, 48, 312, DateTimeKind.Local).AddTicks(6129),
+                            ReleaseTime = new DateTime(2024, 9, 4, 16, 37, 54, 859, DateTimeKind.Local).AddTicks(7447),
                             ShortDescription = ".NET8  آخرین نسخه اصلی از فریم ورک دات نت است، که پس از انتشار نسخه‌های قبلی، این وعده را به کاربران خود داده است که مجموعه‌ای از ویژگی‌های جدید، پیشرفت‌ها و قابلیت‌های جدید را برای توانمند‌سازی بیشتر توسعه‌دهندگان و ایجاد توسعه برنامه‌های کاربردی و لذت بخش به ارمغان بیاورد",
                             Title = "C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals Eighth Edition"
                         },
@@ -141,7 +144,7 @@ namespace DevsMedia.DataAccess.Migrations
                         {
                             Id = 2,
                             CoverImage = "https://content.packt.com/_/image/original/B02765/cover_image_large.jpg",
-                            ReleaseTime = new DateTime(2024, 9, 5, 0, 26, 48, 312, DateTimeKind.Local).AddTicks(6143),
+                            ReleaseTime = new DateTime(2024, 9, 4, 16, 37, 54, 859, DateTimeKind.Local).AddTicks(7459),
                             ShortDescription = ".NET8  آخرین نسخه اصلی از فریم ورک دات نت است، که پس از انتشار نسخه‌های قبلی، این وعده را به کاربران خود داده است که مجموعه‌ای از ویژگی‌های جدید، پیشرفت‌ها و قابلیت‌های جدید را برای توانمند‌سازی بیشتر توسعه‌دهندگان و ایجاد توسعه برنامه‌های کاربردی و لذت بخش به ارمغان بیاورد",
                             Title = "Cyber"
                         });

@@ -1,0 +1,36 @@
+﻿@model Blog
+
+<form method="post">
+    <div class="container">
+        <div class="row mb-3">
+            <h2>افزودن بلاگ</h2>
+            <hr />
+        </div>
+
+        <div class="row mb-2">
+            <label class="text-primary mb-1" asp-for="Title"></label>
+            <input class="form-control mb-2" asp-for="Title" />
+            <span class="mb-4 text-danger" asp-validation-for="Title"></span>
+
+            <label class="text-primary mb-1 mt-2" asp-for="ShortDescription"></label>
+            <input class="form-control mb-2" asp-for="ShortDescription" />
+            <span class="mb-4 text-danger" asp-validation-for="ShortDescription"></span>
+
+
+            <label class="text-primary mb-1 mt-2" asp-for="CoverImage"></label>
+            <input class="form-control mb-2" asp-for="CoverImage" />
+            <span class="mb-4 text-danger" asp-validation-for="CoverImage"></span>
+
+
+            <label class="text-primary mb-1 mt-2" asp-for="BlogText"></label>
+            <input class="form-control mb-2" asp-for="BlogText" />
+            <span class="mb-4 text-danger" asp-validation-for="BlogText"></span>
+
+
+        </div>
+        <div class="row my-4">
+            <button type="submit" class="col-6 col-md-3 btn btn-primary">افزودن</button>
+            <a asp-controller="Blog" asp-action="Manage" class="col-6 col-md-3 btn btn-secondary">انصراف</a>
+        </div>
+    </div>
+</form>
