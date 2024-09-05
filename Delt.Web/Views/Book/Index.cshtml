@@ -27,7 +27,7 @@
                         <p class="card-text">@book.ShortDescription</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a  href="@book.DownloadLink" class="btn btn-sm btn-outline-secondary">دانلود</a>
+                                <a  href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary">دانلود</a>
                                 <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</a>
                             </div>
                         </div>
