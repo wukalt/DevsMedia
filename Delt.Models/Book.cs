@@ -12,5 +12,8 @@ namespace Delt.Models
         [Required(ErrorMessage = "نام منتشر اجباری است.")]
         [MaxLength(100, ErrorMessage = "نام منتشر نباید از 100 کاراکتر بیشتر باشد.")]
         public string Publisher { get; set; } = null!;
+
+        [Required(ErrorMessage = "لینک دانلود الزامی است.")]
+        public string DownloadLink { get; set; } = null!;
     }
 }

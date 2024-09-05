@@ -1,0 +1,31 @@
+﻿@model Book
+
+<div class="container text-center">
+    <div class="row mb-4">
+        <h3>@Model.Title</h3>
+        <hr />
+        <div class="text-center">
+            <img src="@Model.CoverImage" alt="@Model.Title" style="width: 300px; border-radius: 40px;" />
+        </div>
+    </div>
+    <div class="row mb-4">
+        <hr />
+        <h4 class="mb-2">@Model.ShortDescription</h4>
+    </div>
+    <hr />
+    <div class="row mt-2">
+        <p class="mb-2">نام نویسنده : @Model.Author</p>
+        <p class="mb-2">منتشر : @Model.Publisher</p>
+        <small class="mb-2">تاریخ انتشار کتاب : @Model.ReleaseTime.ConvertToShamsi()</small>
+    </div>
+    <div class="row btn-group mt-3">
+        <div class="col-md-6">
+            <a href="@Model.DownloadLink" class="btn btn-primary">دانلود</a>
+        </div>
+
+        <div class="col-md-6">
+            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary btn-outline-dark">بازگشت</a>
+        </div>
+
+    </div>
+</div>

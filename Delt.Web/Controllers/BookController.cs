@@ -1,5 +1,6 @@
 ﻿using Delt.DataAccess.Interfaces;
 using Delt.Models;
+using Delt.Utility.Checkers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Delt.Web.Controllers
@@ -17,6 +18,19 @@ namespace Delt.Web.Controllers
         {
             IEnumerable<Book> books = await _context.Book.GetAllAsync();
             return View(books);
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id.IsNullOrZero())
+                return NotFound();
+
+            Book book = await _context.Book.GetAsync(book => book.Id == id);
+
+            if (book.IsNull())
+                return NotFound();
+
+            return View(book);
         }
     }
 }
