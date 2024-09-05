@@ -49,10 +49,7 @@ namespace Delt.Web.Controllers
                 TempData["success"] = "بلاگ با موفقیت ویرایش شد.";
                 return RedirectToAction("Manage");
             }
-            else
-            {
-                TempData["error"] = "در ویرایش بلاگ مشکلی پیش آمده.";
-            }
+            TempData["error"] = "در ویرایش بلاگ مشکلی پیش آمده.";
             return View();
         }
 
@@ -74,7 +71,7 @@ namespace Delt.Web.Controllers
                 TempData["success"] = "بلاگ با موفقیت حذف شد";
             }
 
-            return Json(new {success = true });
+            return Json(new { success = true });
         }
 
         public IActionResult Add()
@@ -92,6 +89,7 @@ namespace Delt.Web.Controllers
                 TempData["success"] = "بلاگ با موفقیت افزوده شد.";
                 return RedirectToAction("Manage");
             }
+            TempData["error"] = "در افزودن بلاگ مشکلی پیش آمد.";
             return View();
         }
 
