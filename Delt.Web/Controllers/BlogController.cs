@@ -100,5 +100,18 @@ namespace Delt.Web.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id.IsNullOrZero())
+                return NotFound();
+
+            Blog blog = await _context.Blog.GetAsync(blog => blog.Id == id);
+
+            if (blog.IsNull())
+                return NotFound();
+
+            return View(blog);
+        }
     }
 }

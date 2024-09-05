@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<Blog>
-@using Delt.Utility.Convertors
 
 <div class="container">
     <header>
@@ -27,8 +26,8 @@
                         <p class="card-text">@blog.ShortDescription</p>
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</button>
+                                <a type="button" class="btn btn-sm btn-outline-secondary" asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">مشاهده</a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">ذخیره برای بعد</button>
                             </div>
                         </div>
                         <small class="text-muted"><i class="bi bi-calendar"></i> تاریخ انتشار  : @blog.ReleaseTime.ConvertToShamsi()</small>

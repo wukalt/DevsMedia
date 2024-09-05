@@ -1,0 +1,23 @@
+﻿@model Blog
+
+<div class="container">
+    <div class="row mb-3">
+        <h1 class="mb-2">@Model.Title</h1>
+        <hr />
+        <img class="p-4 m-4" src="@Model.CoverImage" alt="@Model.Title" style="border-radius:9px" />
+    </div>
+    <div class="row mb-4">
+        <p class="mb-3">@Model.BlogText</p>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-6">
+            <a class="btn btn-primary" asp-controller="Blog" asp-action="Index">بازگشت</a>
+        </div>
+        <div class="col-md-3 col-6 text-end">
+            <small>
+                @Model.ReleaseTime.ConvertToShamsi() <i class="bi bi-calendar"></i>
+            </small>
+        </div>
+    </div>
+</div>
