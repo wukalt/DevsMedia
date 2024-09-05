@@ -85,12 +85,6 @@ namespace Delt.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(Blog blog)
         {
-            if (blog.IsNull())
-            {
-                TempData["error"] = "در افزودن بلاگ مشکلی پیش آمد";
-                return BadRequest();
-            }
-            
             if (ModelState.IsValid)
             {
                 await _context.Blog.Add(blog);
