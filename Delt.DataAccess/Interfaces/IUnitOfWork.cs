@@ -4,6 +4,7 @@
     {
         IBlogRepository Blog { get; }
         IBookRepository Book { get; }
+        ISeminarRepository Seminar { get; }
         Task Commit();
     }
 }
