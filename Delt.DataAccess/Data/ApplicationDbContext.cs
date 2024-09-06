@@ -14,6 +14,7 @@ namespace Delt.DataAccess.Data
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<Seminar> Seminars { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
