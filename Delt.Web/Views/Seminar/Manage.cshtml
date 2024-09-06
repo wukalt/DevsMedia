@@ -1,1 +1,48 @@
-﻿<h1>sem manage</h1>
+﻿@model IEnumerable<Seminar>
+
+<form method="get">
+    <div class="container">
+        <div class="row mb-3 mb-md-4">
+            <h2 class="col-md-10">مدیریت سمینار ها</h2>
+            <a asp-controller="Seminar" asp-action="Add" class="btn btn-primary col-md-2 text-end mb-3 text-center">افزودن سمینار  <i class="bi bi-plus-circle"></i></a>
+            <hr />
+        </div>
+        <div class="row mb-3 mb-md-4">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">آیدی</th>
+                        <th scope="col">عنوان</th>
+                        <th scope="col">مدرس</th>
+                        <th scope="col">قیمت</th>
+                        <th scope="col">تاریخ برگذاری</th>
+                        <th>اعمال</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Seminar seminar in Model)
+                    {
+                        <tr class="table-dark">
+                            <td>@seminar.Id</td>
+                            <td>@seminar.Title</td>
+                            <td>@seminar.Teacher.Name</td>
+                            <td>@seminar.Price</td>
+                            <td>@seminar.ReleaseTime.ConvertToShamsi()</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-controller="Seminar" asp-action="Update" asp-route-id="@seminar.Id" class="btn btn-sm btn-primary col-md-6" style="border-radius:2px">ویرایش<br /><i class="bi bi-pencil-square"></i></a>
+                                    <a onclick="Remove('/Seminar/Remove/@seminar.Id')" class="btn btn-sm btn-danger col-md-6" style="border-radius:2px">حذف<br /><i class="bi bi-trash3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/removeAlert.js"></script>
+}

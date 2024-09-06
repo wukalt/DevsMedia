@@ -4,6 +4,7 @@ using Delt.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delt.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240906155934_AddPricePropertyToSeminarModel")]
+    partial class AddPricePropertyToSeminarModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,20 +170,9 @@ namespace Delt.DataAccess.Migrations
                             CoverImage = "null for now",
                             Level = 0,
                             Price = 0.0,
-                            ReleaseTime = new DateTime(2024, 9, 6, 19, 54, 44, 686, DateTimeKind.Local).AddTicks(6685),
+                            ReleaseTime = new DateTime(2024, 9, 6, 19, 29, 32, 38, DateTimeKind.Local).AddTicks(4124),
                             ShortDescription = "dksjjdksjdkjskjdksjdksjdkjskdkjsd",
                             TeacherId = 1,
-                            Title = "this is title"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CoverImage = "null for now",
-                            Level = 0,
-                            Price = 0.0,
-                            ReleaseTime = new DateTime(2024, 9, 6, 19, 54, 44, 686, DateTimeKind.Local).AddTicks(6698),
-                            ShortDescription = "dksjjdksjdkjskjdksjdksjdkjskdkjsd",
-                            TeacherId = 2,
                             Title = "this is title"
                         });
                 });
@@ -220,15 +212,6 @@ namespace Delt.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Bio = "not to as",
-                            Experience = 7,
-                            Family = ",p",
-                            Name = "ali",
-                            ProfileImage = "null for bnow"
-                        },
-                        new
-                        {
-                            Id = 2,
                             Bio = "not to as",
                             Experience = 7,
                             Family = ",p",

@@ -8,9 +8,5 @@ namespace Delt.DataAccess.Interfaces
         Task<T> GetAsync(Expression<Func<T, bool>> filter);
         Task Add(T entity);
         Task Remove(T entity);
-
-        //IEnumerable<T> GetAll();
-        //T Get(Expression<Func<T, bool>> filter);
-
     }
 }

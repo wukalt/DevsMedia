@@ -26,10 +26,12 @@
                         <p class="card-text">@seminar.ShortDescription</p>
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div class="btn-group">
-                                <a type="button" class="btn btn-sm btn-outline-secondary" asp-controller="Seminar" asp-action="Details" asp-route-id="@seminar.Id">مشاهده</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">ذخیره برای بعد</button>
+                                <a type="button" class="btn btn-sm btn-outline-secondary" asp-controller="Seminar" asp-action="Details" asp-route-id="@seminar.Id">مشاهده و تهیه بلیط</a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary"> مشاهده رزومه مدرس</button>
                             </div>
                         </div>
+                        <small class="text-muted row">مدرس : @seminar.Teacher</small>
+                        <small class="text-muted row">قیمت بلیط : @seminar.Price</small>
                         <small class="text-muted"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small>
                     </div>
                 </div>

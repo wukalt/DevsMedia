@@ -12,6 +12,10 @@ namespace Delt.Models
         [DisplayName("سطح سمینار")]
         public SeminarLevel Level { get; set; }
 
+        [Required(ErrorMessage = "قیمت بلیط اجباری است.")]
+        [DisplayName("قیمت بلیط")]
+        public double Price { get; set; }
+
         [Required(ErrorMessage = "فیلد مدرس اجباری است.")]
         [ForeignKey("Teacher")]
         public int TeacherId { get; set; }

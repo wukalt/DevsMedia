@@ -1,6 +1,8 @@
 ﻿using Delt.DataAccess.Data;
 using Delt.DataAccess.Interfaces;
 using Delt.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Delt.DataAccess.Repository
 {
@@ -18,6 +20,17 @@ namespace Delt.DataAccess.Repository
             {
                 _context.Seminars.Update(seminar);
             });
+        }
+
+        public override async Task<IEnumerable<Seminar>> GetAllAsync()
+        {
+            return await _context.Seminars.Include(x => x.Teacher).ToListAsync();
+        }
+
+        public override async Task<Seminar> GetAsync(Expression<Func<Seminar, bool>> filter)
+        {
+            Seminar? seminar = await _context.Seminars.Where(filter).Include(x => x.Teacher).FirstOrDefaultAsync();
+            return seminar ?? new Seminar();
         }
     }
 }
