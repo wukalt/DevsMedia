@@ -1,1 +1,39 @@
-﻿<h1>semi</h1>
+﻿@model IEnumerable<Seminar>
+
+<div class="container">
+    <header>
+        <div class="row main pb-2">
+            <h2 class="text-primary text-center">سمینار های در حال برگذاری ...</h2>
+        </div>
+        <div class="row pb-4">
+            <div class="col-11">
+                <input class="form-control text-primary text-center shadow" style="border-radius: 30px; width: 100%" placeholder="سمینار مورد نظر خود را جستجو کنید">
+            </div>
+            <div class="col-1">
+                <button class="btn btn-primary form-control btn-group" style="width:10%; border-radius:25px"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <hr />
+        <br />
+    </header>
+    <div class="row">
+        @foreach (Seminar seminar in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="@seminar.CoverImage" alt="@seminar.Title">
+                    <div class="card-body">
+                        <p class="card-text">@seminar.ShortDescription</p>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-sm btn-outline-secondary" asp-controller="Seminar" asp-action="Details" asp-route-id="@seminar.Id">مشاهده</a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">ذخیره برای بعد</button>
+                            </div>
+                        </div>
+                        <small class="text-muted"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
