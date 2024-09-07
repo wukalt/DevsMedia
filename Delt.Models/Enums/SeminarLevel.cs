@@ -3,7 +3,6 @@
     public enum SeminarLevel
     {
         Starter,
-        Bigeener,
         Intermediate,
         Profesional
     }
