@@ -24,7 +24,10 @@
                 <div class="card mb-5 box-shadow" style="width: 250px;">
                     <img class="card-img-top" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p><small style="display: inline;">نام نویسنده : @book.Author</small></p>
+                        <p><small style="display: inline;">منتشر : @book.Publisher</small></p>
+                        <p><small style="display: inline;">تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
                             <div class="btn-group">
                                 <a  href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary">دانلود</a>
                                 <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</a>
