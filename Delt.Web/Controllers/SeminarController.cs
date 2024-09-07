@@ -82,6 +82,7 @@ namespace Delt.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(Seminar seminar)
         {
+
             if (ModelState.IsValid)
             {
                 await _context.Seminar.Add(seminar);

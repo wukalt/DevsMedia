@@ -19,6 +19,9 @@ namespace Delt.Models
         [Required(ErrorMessage = "فیلد مدرس اجباری است.")]
         [ForeignKey("Teacher")]
         public int TeacherId { get; set; }
+
+        [Required(ErrorMessage = "نام مدرس اجباری است.")]
+        [DisplayName("مدرس")]
         public Teacher Teacher { get; set; } = null!;
     }
 }
