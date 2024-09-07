@@ -23,7 +23,7 @@
                         <tr class="table-dark">
                             <td>@blog.Id</td>
                             <td>@blog.Title</td>
-                            <td>@blog.ShortDescription</td>
+                            <td>@blog.BlogText.Substring(0, 50)</td>
                             <td>@blog.ReleaseTime.ConvertToShamsi()</td>
                             <td>
                                 <div class="btn-group">
