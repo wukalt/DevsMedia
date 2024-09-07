@@ -19,15 +19,7 @@ namespace Delt.DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Teacher>().HasData(
-                new Teacher() { Id = 1, Bio = "not to as", Experience = 7, Name = "ali", Family = ",p", ProfileImage = "null for bnow" },
-                new Teacher() { Id = 2, Bio = "not to as", Experience = 7, Name = "ali", Family = ",p", ProfileImage = "null for bnow" }
-                );
-
-            modelBuilder.Entity<Seminar>().HasData(
-                new Seminar() { Id = 1, Title = "this is title", CoverImage = "null for now", Level = Models.Enums.SeminarLevel.Starter, ShortDescription = "dksjjdksjdkjskjdksjdksjdkjskdkjsd", TeacherId = 1 },
-                new Seminar() { Id = 2, Title = "this is title", CoverImage = "null for now", Level = Models.Enums.SeminarLevel.Starter, ShortDescription = "dksjjdksjdkjskjdksjdksjdkjskdkjsd", TeacherId = 2 }
-                );
+            
         }
     }
 }
