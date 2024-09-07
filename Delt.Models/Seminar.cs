@@ -8,6 +8,9 @@ namespace Delt.Models
 {
     public class Seminar : BaseContent
     {
+        [DisplayName("توضیح")]
+        public string? Description { get; set; }
+
         [Required(ErrorMessage = "سطح سمینار اجباری است.")]
         [DisplayName("سطح سمینار")]
         public SeminarLevel Level { get; set; }
