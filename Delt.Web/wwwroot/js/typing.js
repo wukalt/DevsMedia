@@ -13,5 +13,5 @@ function typitvs() {
             $(h2).append(text[i]);
             i++;
         }
-    }, 150);
+    }, 100);
 }
