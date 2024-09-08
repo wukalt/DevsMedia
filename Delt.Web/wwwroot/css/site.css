@@ -35,3 +35,8 @@ body {
 .round {
     border-radius: 15px;
 }
+
+
+* {
+    box-sizing: border-box
+}

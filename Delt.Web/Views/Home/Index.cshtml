@@ -22,8 +22,8 @@
         <h1 class="text-center mt-2 mb-4 word"></h1>
         <hr />
         <div class="col-md-4 mb-4">
-            <div class="card mb-5 box-shadow" style="width: 250px;">
-                <img class="card-img-top" src="~/images/blogHome.png" alt="بلاگ">
+            <div class="round card mb-5 box-shadow" style="width: 250px;">
+                <img class="round card-img-top" src="~/images/blogHome.png" alt="بلاگ">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <a asp-controller="Blog" asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:100%;">رفتن  به بلاگ</a>
@@ -63,8 +63,8 @@
         @foreach (Blog blog in blogs)
         {
             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@blog.CoverImage" alt="@blog.Title">
+                <div class="round card mb-4 box-shadow">
+                    <img class="round card-img-top" src="@blog.CoverImage" alt="@blog.Title">
                     <div class="card-body">
                         <p class="card-title">@blog.Title</p>
                         <small class="text-muted">@blog.BlogText.Substring(0, 30)</small>
@@ -88,8 +88,8 @@
         @foreach (Book book in books)
         {
             <div class="col-md-4">
-                <div class="card mb-5 box-shadow" style="width: 250px;">
-                    <img class="card-img-top" src="@book.CoverImage" alt="@book.Title">
+                <div class="round card mb-5 box-shadow" style="width: 250px;">
+                    <img class="round card-img-top" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
                         <p><small style="display: inline;">نام نویسنده : @book.Author</small></p>
                         <p><small style="display: inline;">منتشر : @book.Publisher</small></p>
@@ -113,8 +113,8 @@
         @foreach (Seminar seminar in seminars)
         {
             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@seminar.CoverImage" alt="@seminar.Title">
+                <div class="round card mb-4 box-shadow">
+                    <img class="round card-img-top" src="@seminar.CoverImage" alt="@seminar.Title">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div class="btn-group">
