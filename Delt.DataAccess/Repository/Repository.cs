@@ -1,6 +1,5 @@
 ﻿using Delt.DataAccess.Data;
 using Delt.DataAccess.Interfaces;
-using Delt.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -29,9 +28,11 @@ namespace Delt.DataAccess.Repository
             });
         }
 
-        public virtual async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync(int take = 0)
         {
-            return await _dbSet.ToListAsync();
+            if (take == 0)
+                return await _dbSet.ToListAsync();
+            return await _dbSet.Take(take).ToListAsync();
         }
 
         public virtual async Task<T> GetAsync(Expression<Func<T, bool>> filter)

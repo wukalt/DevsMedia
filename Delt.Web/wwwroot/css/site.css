@@ -31,3 +31,7 @@ body {
 .btn {
     border-radius : 3px;
 }
+
+.round{
+    border-radius : 15px;
+}

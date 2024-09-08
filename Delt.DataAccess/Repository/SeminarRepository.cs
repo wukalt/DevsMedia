@@ -22,7 +22,7 @@ namespace Delt.DataAccess.Repository
             });
         }
 
-        public override async Task<IEnumerable<Seminar>> GetAllAsync()
+        public override async Task<IEnumerable<Seminar>> GetAllAsync(int take = 0)
         {
             return await _context.Seminars.Include(x => x.Teacher).ToListAsync();
         }
