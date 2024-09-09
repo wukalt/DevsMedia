@@ -1,1 +1,31 @@
-﻿<h1>Com</h1>
+﻿<div class="container">
+
+    <div class="row text-center main mb-4">
+        <h1 class="word"></h1>
+    </div>
+
+    <hr />
+
+    <div class="row mt-4 my-4">
+        <div class="col-5">
+            <div class="round card mb-5 box-shadow" style="width: 250px;">
+                <img class="round card-img-top" src="" alt="">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <a asp-controller="Community" asp-action="FrBack" class="btn btn-sm btn-outline-primary" style="width:100%;" target="_blank">Back-End کارم!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="round card mb-5 box-shadow" style="width: 250px;">
+                <img class="round card-img-top" src="" alt="">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <a asp-controller="Community" asp-action="FrBack" asp-route-flag="1" class="btn btn-sm btn-outline-primary" style="width:100%;" target="_blank">Front-End کارم !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
