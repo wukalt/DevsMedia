@@ -54,14 +54,14 @@
         </div>
 
     </div>
-
-    <hr />
-
     <div class="row mt-2 mb-4">
-        <h3>بلاگ های منتشر شده :</h3>
+        <div class="mytextdiv">
+            <h3 class="mytexttitle">بلاگ های منتشر شده : &nbsp</h3>
+            <hr class="divider" />
+        </div>
         @foreach (Blog blog in blogs)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
                 <div class="round card mb-4 box-shadow blog-stand">
                     <img class="round card-img-top img-cover" src="@blog.CoverImage" alt="@blog.Title">
                     <div class="card-body p-3">
@@ -79,11 +79,11 @@
             </div>
         }
     </div>
-
-    <hr />
-
     <div class="row mt-2 mb-4">
-        <h3>کتاب های موجود :</h3>
+        <div class="mytextdiv">
+            <h3 class="mytexttitle">کتاب های موجود : &nbsp</h3>
+            <hr class="divider" />
+        </div>
         @foreach (Book book in books)
         {
             <div class="col-md-3 mt-3 navigation-box">
@@ -104,11 +104,11 @@
             </div>
         }
     </div>
-
-    <hr />
-
     <div class="row mt-2 mb-4">
-        <h3>سمینار های در حال برگذاری :</h3>
+        <div class="mytextdiv">
+            <h3 class="mytexttitle">سمینار های در حال برگذاری : &nbsp</h3>
+            <hr class="divider"/>
+        </div>
         @foreach (Seminar seminar in seminars)
         {
             <div class="col-md-4">

@@ -21,15 +21,24 @@
         @foreach (Book book in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-5 box-shadow round navigation-box" id="book-stand">
+                <div class="card mb-5 box-shadow round navigation-box">
                     <img class="card-img-top img-cover" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
-                        <p><small>نام نویسنده : @book.Author</small></p>
-                        <p><small>منتشر : @book.Publisher</small></p>
-                        <p><small>تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
+                        <p>
+                            <small><i class="bi bi-person-fill-check"></i>&nbsp&nbsp&nbspنام نویسنده : @book.Author</small>
+                        </p>
+                        <p>
+                            <small><i class="bi bi-file-earmark-arrow-up-fill"></i>&nbsp&nbsp&nbspمنتشر : @book.Publisher</small>
+                        </p>
+                        <p>
+                            <small><i class="bi bi-calendar"></i>&nbsp&nbsp&nbspتاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small>
+                        </p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div class="btn-group">
-                                <a  href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary navigation-btn">دانلود</a>
+                                <a href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary navigation-btn">
+                                    دانلود<br />
+                                    <i class="bi bi-cloud-arrow-down-fill"></i>
+                                </a>
                                 <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-outline-secondary navigation-btn">مشاهده جزئیات</a>
                             </div>
                         </div>

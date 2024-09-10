@@ -74,6 +74,23 @@ img {
     width: 100%;
 }
 
+.mytextdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mytexttitle {
+    flex-grow: 0;
+}
+
+.divider {
+    flex-grow: 1;
+    height: 1px;
+    color: #ff3111;
+    background-color: #9f9f9f;
+}
+
 #search-box {
     border-radius: 30px;
     width: 100%;
@@ -82,7 +99,7 @@ img {
 
 #btn-search {
     width: 10%;
-    border-radius: 25px
+    border-radius: 25px;
 }
 
 #book-stand {
