@@ -12,6 +12,10 @@ html {
 
 body {
     margin-bottom: 60px;
+    font-family: "Baloo Bhaijaan 2", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 small {
@@ -85,4 +89,11 @@ img {
     height: 300px;
     width: 250px;
     align-content: center;
+}
+
+#send-box {
+    border-radius: 30px;
+    width: 100%;
+    text-align: right;
+    margin: 100%, 0, 0, 0;
 }
