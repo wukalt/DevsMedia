@@ -10,17 +10,33 @@
     </div>
     <hr />
     <div class="row mt-2">
-        <p class="mb-2">نام نویسنده : @Model.Author</p>
-        <p class="mb-2">منتشر : @Model.Publisher</p>
-        <p><small class="mb-2">تاریخ انتشار کتاب : @Model.ReleaseTime.ConvertToShamsi()</small></p>
+        <p class="mb-2">
+            <i class="bi bi-person-fill-check"></i>&nbsp&nbsp&nbspنام نویسنده : @Model.Author
+        </p>
+        <p class="mb-2">
+            <i class="bi bi-file-earmark-arrow-up-fill"></i>&nbsp&nbsp&nbsp منتشر : @Model.Publisher
+        </p>
+        <p>
+            <small class="mb-2">
+                <i class="bi bi-calendar"></i>&nbsp&nbsp&nbsp تاریخ انتشار کتاب : @Model.ReleaseTime.ConvertToShamsi()
+            </small>
+        </p>
     </div>
     <div class="row btn-group mt-3">
         <div class="col-md-6">
-            <a href="@Model.DownloadLink" target="_blank" class="btn btn-primary">دانلود<br /><i class="bi bi-download"></i></a>
+            <a href="@Model.DownloadLink" target="_blank" class="btn btn-primary">
+                دانلود
+                <br />
+                <i class="bi bi-download"></i>
+            </a>
         </div>
 
         <div class="col-md-6">
-            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary btn-outline-dark">بازگشت<br /><i class="bi bi-arrow-right-circle"></i></a>
+            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary btn-outline-dark">
+                بازگشت
+                <br />
+                <i class="bi bi-arrow-right-circle"></i>
+            </a>
         </div>
 
     </div>
