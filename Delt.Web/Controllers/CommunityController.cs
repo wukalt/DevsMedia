@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Delt.Models.Enums;
+using Delt.Utility.Checkers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Delt.Web.Controllers
 {
@@ -7,6 +9,21 @@ namespace Delt.Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult ChatPage(ProgrammerType programmerType)
+        {
+            ProgrammerType programmerFlag;
+
+            if (programmerType.IsNull())
+                return NotFound();
+
+            if (programmerType == ProgrammerType.FrontEnd)
+                programmerFlag = ProgrammerType.FrontEnd;
+            else
+                programmerFlag = ProgrammerType.BackEnd;
+
+            return View(programmerFlag);
         }
     }
 }

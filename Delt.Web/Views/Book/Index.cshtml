@@ -7,10 +7,10 @@
         </div>
         <div class="row mt-4 pb-4">
             <div class="col-11">
-                <input class="form-control text-primary shadow" style="border-radius: 30px; width: 100%" placeholder="کتاب مورد نظر خود را جستجو کنید">
+                <input class="form-control text-primary shadow" id="search-box" placeholder="کتاب مورد نظر خود را جستجو کنید">
             </div>
             <div class="col-1">
-                <button class="btn btn-primary form-control btn-group" style="width:10%; border-radius:25px;"><i class="bi bi-search"></i></button>
+                <button class="btn btn-primary form-control btn-group" id="btn-search"><i class="bi bi-search"></i></button>
             </div>
         </div>
         <hr />
@@ -21,16 +21,16 @@
         @foreach (Book book in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-5 box-shadow" style="width: 250px;">
-                    <img class="card-img-top" src="@book.CoverImage" alt="@book.Title">
+                <div class="card mb-5 box-shadow round navigation-box" id="book-stand">
+                    <img class="card-img-top img-cover" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
-                        <p><small style="display: inline;">نام نویسنده : @book.Author</small></p>
-                        <p><small style="display: inline;">منتشر : @book.Publisher</small></p>
-                        <p><small style="display: inline;">تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
+                        <p><small>نام نویسنده : @book.Author</small></p>
+                        <p><small>منتشر : @book.Publisher</small></p>
+                        <p><small>تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div class="btn-group">
-                                <a  href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary">دانلود</a>
-                                <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-outline-secondary">مشاهده جزئیات</a>
+                                <a  href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary navigation-btn">دانلود</a>
+                                <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-outline-secondary navigation-btn">مشاهده جزئیات</a>
                             </div>
                         </div>
                     </div>

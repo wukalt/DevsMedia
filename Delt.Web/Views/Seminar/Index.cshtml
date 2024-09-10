@@ -7,10 +7,10 @@
         </div>
         <div class="row mt-4 pb-4">
             <div class="col-11">
-                <input class="form-control text-primary shadow" style="border-radius: 30px; width: 100%" placeholder="سمینار مورد نظر خود را جستجو کنید">
+                <input class="form-control text-primary shadow" id="search-box" placeholder="سمینار مورد نظر خود را جستجو کنید">
             </div>
             <div class="col-1">
-                <button class="btn btn-primary form-control btn-group" style="width:10%; border-radius:25px"><i class="bi bi-search"></i></button>
+                <button class="btn btn-primary form-control btn-group" id="btn-search"><i class="bi bi-search"></i></button>
             </div>
         </div>
         <hr />
@@ -20,8 +20,8 @@
         @foreach (Seminar seminar in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@seminar.CoverImage" alt="@seminar.Title">
+                <div class="card mb-4 box-shadow round">
+                    <img class="card-img-top img-cover" src="@seminar.CoverImage" alt="@seminar.Title">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div class="btn-group">
@@ -30,9 +30,9 @@
                             </div>
                         </div>
                         <div class="row mt-4">
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-person-fill-check"></i> مدرس : @seminar.Teacher  </small></p>
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-cash-coin"></i> قیمت بلیط : @seminar.Price</small></p>
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small></p>
+                            <p><small class="text-muted"><i class="bi bi-person-fill-check"></i> مدرس : @seminar.Teacher  </small></p>
+                            <p><small class="text-muted"><i class="bi bi-cash-coin"></i> قیمت بلیط : @seminar.Price</small></p>
+                            <p><small class="text-muted"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small></p>
                         </div>
                     </div>
                 </div>

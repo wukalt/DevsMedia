@@ -16,39 +16,38 @@
             seminars.Add((Seminar)x);
     }
 }
-
 <div class="container">
     <div class="main row mb-4">
         <h1 class="text-center mt-2 mb-4 word"></h1>
         <hr />
-        <div class="col-md-4 mb-4">
-            <div class="round card mb-5 box-shadow" style="width: 250px;">
-                <img class="round card-img-top" src="~/images/blogHome.png" alt="بلاگ">
+        <div class="col-md-4">
+            <div class="round card mb-4 box-shadow navigation-box">
+                <img class="card-img-top img-cover" src="~/images/blogHome.png" alt="بلاگ">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a asp-controller="Blog" asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:100%;">رفتن  به بلاگ</a>
+                        <a asp-controller="Blog" asp-action="Index" class="btn btn-sm btn-outline-primary navigation-btn">رفتن  به بلاگ</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="round card mb-5 box-shadow" style="width: 250px;">
-                <img class="round card-img-top" src="~/images/bookHome.png" alt="کتاب">
+            <div class="round card mb-4 box-shadow navigation-box">
+                <img class="card-img-top img-cover" src="~/images/bookHome.png" alt="کتاب">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a asp-controller="Book" asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:100%;">رفتن  به کتاب ها</a>
+                        <a asp-controller="Book" asp-action="Index" class="btn btn-sm btn-outline-primary navigation-btn">رفتن  به کتاب ها</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="round card mb-5 box-shadow" style="width: 250px;">
-                <img class="round card-img-top" src="~/images/seminarHome.png" alt="سمینار">
+            <div class="round card mb-4 box-shadow navigation-box">
+                <img class="card-img-top img-cover" src="~/images/seminarHome.png" alt="سمینار">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a asp-controller="Seminar" asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:100%;">رفتن  به سمینار ها</a>
+                        <a asp-controller="Seminar" asp-action="Index" class="btn btn-sm btn-outline-primary navigation-btn">رفتن  به سمینار ها</a>
                     </div>
                 </div>
             </div>
@@ -58,18 +57,16 @@
 
     <hr />
 
-    <hr />
-
     <div class="row mt-2 mb-4">
         <h3>بلاگ های منتشر شده :</h3>
         @foreach (Blog blog in blogs)
         {
             <div class="col-md-4">
-                <div class="round card mb-4 box-shadow">
-                    <img class="round card-img-top" src="@blog.CoverImage" alt="@blog.Title">
-                    <div class="card-body">
+                <div class="round card mb-4 box-shadow blog-stand">
+                    <img class="round card-img-top img-cover" src="@blog.CoverImage" alt="@blog.Title">
+                    <div class="card-body p-3">
                         <p class="card-title">@blog.Title</p>
-                        <small class="text-muted">@blog.BlogText.Substring(0, 30)</small>
+                        <small class="text-muted">@blog.BlogText.Substring(0, 100)...</small>
                         <div class="d-flex justify-content-between align-items-center mb-2 mt-4">
                             <div class="btn-group">
                                 <a type="button" class="btn btn-sm btn-outline-secondary" asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">مشاهده</a>
@@ -89,13 +86,13 @@
         <h3>کتاب های موجود :</h3>
         @foreach (Book book in books)
         {
-            <div class="col-md-4">
-                <div class="round card mb-5 box-shadow" style="width: 250px;">
-                    <img class="round card-img-top" src="@book.CoverImage" alt="@book.Title">
+            <div class="col-md-3 mt-3 navigation-box">
+                <div class="round card mb-4 box-shadow box-book-stand">
+                    <img class="round card-img-top img-cover" id="book-stand" src="@book.CoverImage" alt="@book.Title">
                     <div class="card-body">
-                        <p><small style="display: inline;">نام نویسنده : @book.Author</small></p>
-                        <p><small style="display: inline;">منتشر : @book.Publisher</small></p>
-                        <p><small style="display: inline;">تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
+                        <p><small>نام نویسنده : @book.Author</small></p>
+                        <p><small>منتشر : @book.Publisher</small></p>
+                        <p><small>تاریخ انتشار : @book.ReleaseTime.ConvertToShamsi()</small></p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div class="btn-group">
                                 <a href="@book.DownloadLink" target="_blank" class="btn btn-sm btn-outline-secondary">دانلود</a>
@@ -115,8 +112,8 @@
         @foreach (Seminar seminar in seminars)
         {
             <div class="col-md-4">
-                <div class="round card mb-4 box-shadow">
-                    <img class="round card-img-top" src="@seminar.CoverImage" alt="@seminar.Title">
+                <div class="round card mb-4 box-shadow navigation-box">
+                    <img class="round card-img-top img-cover" src="@seminar.CoverImage" alt="@seminar.Title">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <div class="btn-group">
@@ -125,9 +122,9 @@
                             </div>
                         </div>
                         <div class="row mt-4">
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-person-fill-check"></i> مدرس : @seminar.Teacher  </small></p>
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-cash-coin"></i> قیمت بلیط : @seminar.Price</small></p>
-                            <p><small class="text-muted" style="display:inline"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small></p>
+                            <p><small class="text-muted"><i class="bi bi-person-fill-check"></i> مدرس : @seminar.Teacher  </small></p>
+                            <p><small class="text-muted"><i class="bi bi-cash-coin"></i> قیمت بلیط : @seminar.Price</small></p>
+                            <p><small class="text-muted"><i class="bi bi-calendar"></i> تاریخ شروع  : @seminar.ReleaseTime.ConvertToShamsi()</small></p>
                         </div>
                     </div>
                 </div>

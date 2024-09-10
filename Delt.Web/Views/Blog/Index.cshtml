@@ -7,10 +7,10 @@
         </div>
         <div class="row mt-4 pb-4">
             <div class="col-11">
-                <input class="form-control text-primary shadow" style="border-radius: 30px; width: 100%" placeholder="بلاگ مورد نظر خود را جستجو کنید">
+                <input class="form-control text-primary shadow" id="search-box" placeholder="بلاگ مورد نظر خود را جستجو کنید">
             </div>
             <div class="col-1">
-                <button class="btn btn-primary form-control btn-group" style="width:10%; border-radius:25px"><i class="bi bi-search"></i></button>
+                <button class="btn btn-primary form-control btn-group btn-search" id="btn-search"><i class="bi bi-search"></i></button>
             </div>
         </div>
         <hr />
@@ -20,8 +20,8 @@
         @foreach (Blog blog in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@blog.CoverImage" alt="@blog.Title">
+                <div class="round card mb-4 box-shadow">
+                    <img class="card-img-top img-cover" src="@blog.CoverImage" alt="@blog.Title">
                     <div class="card-body">
                         <p class="card-title">@blog.Title</p>
                         <small class="text-muted">@blog.BlogText.Substring(0, 30)</small>
