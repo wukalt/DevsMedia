@@ -1,16 +1,16 @@
 ﻿@model Blog
 
 <div class="container">
-    <div class="row mb-3">
+    <div class="row mb-2">
         <h1 class="mb-2">@Model.Title</h1>
         <hr />
-        <img class="p-4 m-4" src="@Model.CoverImage" alt="@Model.Title" />
+        <img class="m-4" src="@Model.CoverImage" alt="@Model.Title" />
     </div>
     <div class="row mb-4">
         <p class="mb-3">@Model.BlogText</p>
         <hr />
     </div>
-    <div class="row">
+    <div class="row mb-4">
         <div class="col-md-9 col-6">
             <a class="btn btn-primary" asp-controller="Blog" asp-action="Index">بازگشت  <i class="bi bi-arrow-right-circle"></i></a>
         </div>
