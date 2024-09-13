@@ -1,36 +1,39 @@
 ﻿@using Delt.Models.Enums
-<div class="container">
 
-    <div class="row text-center main mb-4">
-        <h2>لطفا حوزه خودتو انتخاب کن.</h2>
-    </div>
+<form method="post">
+    <div class="container">
 
-    <hr />
+        <div class="row text-center main mb-4">
+            <h2>لطفا حوزه خودتو انتخاب کن.</h2>
+        </div>
 
-    <div class="row mt-4 my-4">
-        <div class="col-6">
-            <div class="round card mb-5 box-shadow">
-                <img class="round card-img-top" src="~/images/back.png" alt="بک اند">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a asp-controller="Community" asp-action="ChatPage" asp-route-programmerType="@ProgrammerType.BackEnd" class="btn btn-sm btn-outline-primary fill" target="_blank">
-                            <i class="bi bi-pc"></i> Back-End کارم!
-                        </a>
+        <hr />
+
+        <div class="row mt-4 my-4">
+            <div class="col-6">
+                <div class="round card mb-5 box-shadow">
+                    <img class="round card-img-top" src="~/images/back.png" alt="بک اند">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <a asp-controller="Community" asp-action="Chat" asp-route-programmerType="@ProgrammerType.BackEnd" class="btn btn-sm btn-outline-primary fill">
+                                <i class="bi bi-pc"></i> Back-End کارم!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="round card mb-5 box-shadow">
+                    <img class="round card-img-top img-cover" src="~/images/front.png" alt="فرانت اند">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <a asp-controller="Community" asp-action="Chat" asp-route-programmerType="@ProgrammerType.FrontEnd" class="btn btn-sm btn-outline-primary fill">
+                                <i class="bi bi-code-slash"></i> Front-End کارم !
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="round card mb-5 box-shadow">
-                <img class="round card-img-top img-cover" src="~/images/front.png" alt="فرانت اند">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a asp-controller="Community" asp-action="ChatPage" asp-route-programmer-Type="@ProgrammerType.FrontEnd" class="btn btn-sm btn-outline-primary fill" target="_blank">
-                            <i class="bi bi-code-slash"></i> Front-End کارم !
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+</form>

@@ -11,7 +11,7 @@ namespace Delt.Web.Controllers
             return View();
         }
 
-        public IActionResult ChatPage(ProgrammerType programmerType)
+        public IActionResult Chat(ProgrammerType programmerType)
         {
             ProgrammerType programmerFlag;
 

@@ -98,6 +98,11 @@ img {
     border-radius: 25px;
 }
 
+#btn-send {
+    width: 10%;
+    border-radius: 25px;
+}
+
 #book-stand {
     height: 300px;
     width: 250px;
