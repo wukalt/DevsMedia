@@ -2,12 +2,12 @@
 
 <form method="post">
     <div class="container">
-        <div class="row mb-3">
+        <div class="row mb-4">
             <h2>افزودن بلاگ</h2>
             <hr />
         </div>
 
-        <div class="row mb-2">
+        <div class="row mb-4">
             <label class="text-primary mb-1" asp-for="Title"></label>
             <input class="form-control mb-2" asp-for="Title" />
             <span class="mb-4 text-danger" asp-validation-for="Title"></span>
@@ -23,9 +23,9 @@
 
 
         </div>
-        <div class="row my-4">
-            <button type="submit" class="col-6 col-md-3 btn btn-primary">افزودن</button>
-            <a asp-controller="Blog" asp-action="Manage" class="col-6 col-md-3 btn btn-secondary">انصراف</a>
+        <div class="row mb-4">
+            <button type="submit" class="col-6 col-md-3 btn btn-primary mb-4">افزودن</button>
+            <a asp-controller="Blog" asp-action="Manage" class="col-6 col-md-3 btn btn-secondary mb-4">انصراف</a>
         </div>
     </div>
 </form>
