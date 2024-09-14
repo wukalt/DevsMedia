@@ -87,6 +87,12 @@ img {
     background-color: #9f9f9f;
 }
 
+.teacher-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+}
+
 #search-box {
     border-radius: 30px;
     width: 100%;
