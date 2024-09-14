@@ -3,21 +3,28 @@
 @model ProgrammerType
 
 <div class="container">
-
-    <input type="hidden" id="displayName" />
-    <input type="text" class="w-100" id="messageInput" />
-    <input type="button" id="sendButton" value="Send Message" />
-    <ul id="messagesList"></ul>
-
-    
-    
+    <div class="row p-1">
+        <div class="col-1">نام : </div>
+        <div class="col-5">
+            <input type="text" id="userInput" class="form-control" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-1">متن پیام : </div>
+        <div class="col-5">
+            <input type="text" class="w-100 form-control" id="messageInput"/>
+        </div>
+        <div class="col-6 text-end">
+            <input type="button" id="sendButton" class="btn btn-success round" value="ارسال" />
+        </div>
+    </div>
+    <hr />
+    <div class="row p-1">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
 </div>
-
-<script>
-    $(function start() {
-        $("#displayName").val(prompt("Please enter your name", "Harry Potter"));
-    })
-</script>
 
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>

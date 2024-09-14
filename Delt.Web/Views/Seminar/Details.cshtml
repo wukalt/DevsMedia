@@ -1,1 +1,60 @@
-﻿<h1>sem details</h1>
+﻿@model Seminar
+
+@{
+    string fullTeacherName = $"{Model.Teacher.Name} {Model.Teacher.Family}";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <h3>@Model.Title</h3>
+        <hr />
+        <div>
+            <div class="col-8">
+                <img class="col-md-8" src="@Model.CoverImage" alt="@Model.Title" />
+            </div>
+            <div class="col-4 text-end border-2 ">
+                <img class="round w-50 col-md-4 text-end" src="@Model.Teacher.ProfileImage" alt="@fullTeacherName" />
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row mt-2">
+        <p class="mb-2">
+            @Model.Description
+        </p>
+        <hr />
+        <p class="mb-2 mt-2">
+            قیمت :  @Model.Price
+        </p>
+        <div class="row mb-2">
+            <p class="mb-2 mt-2">
+            مدرس : @fullTeacherName
+        </p>
+            <p class="text-end">
+                <small class="mb-2">
+                    <i class="bi bi-calendar"></i>تاریخ برگذاری سمینار&nbsp&nbsp : @Model.ReleaseTime.ConvertToShamsi()
+                </small>
+            </p>
+        </div>
+        
+
+    </div>
+    <div class="row btn-group mt-3">
+        <div class="col-md-6">
+            <a href="" target="_blank" class="btn btn-primary">
+                خرید بلیط
+                <br />
+                <i class="bi bi-download"></i>
+            </a>
+        </div>
+
+        <div class="col-md-6">
+            <a asp-controller="Seminar" asp-action="Index" class="btn btn-secondary btn-outline-dark">
+                بازگشت
+                <br />
+                <i class="bi bi-arrow-right-circle"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
