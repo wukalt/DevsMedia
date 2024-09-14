@@ -7,7 +7,9 @@
         <img class="m-4" src="@Model.CoverImage" alt="@Model.Title" />
     </div>
     <div class="row mb-4">
-        <p class="mb-3">@Model.BlogText</p>
+        <p class="mb-3">
+            @Html.Raw(Model.BlogText)
+        </p>
         <hr />
     </div>
     <div class="row mb-4">
