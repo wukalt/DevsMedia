@@ -17,18 +17,24 @@
             <input class="form-control mb-2" asp-for="CoverImage" />
             <span class="mb-4 text-danger" asp-validation-for="CoverImage"></span>
 
-
             <label class="text-primary mb-1 mt-2" asp-for="Level"></label>
-            <input id="tinyEditor" class="form-control mb-2" asp-for="Level" />
-            <span class="mb-4 text-danger" asp-validation-for="Level"></span>
+            <select class="form-control mb-4 mt-2" asp-for="Level">
+                <option value="Starter">مقدماتی</option>
+                <option value="Intermediate">متوسط</option>
+                <option value="Profesional">پیشرفته</option>
+            </select>
 
-            <label class="text-primary mb-1 mt-2" asp-for="Price"></label>
-            <input id="tinyEditor" class="form-control mb-2" asp-for="Price" />
+            <label class="text-primary mb-1 mt-4" asp-for="Price"></label>
+            <input type="number" class="form-control mb-2" asp-for="Price" />
             <span class="mb-4 text-danger" asp-validation-for="Price"></span>
 
             <label class="text-primary mb-1 mt-2" asp-for="Teacher.Name"></label>
-            <input id="tinyEditor" class="form-control mb-2" asp-for="Teacher.Name" />
+            <input type="text" class="form-control mb-2" asp-for="Teacher.Name" />
             <span class="mb-4 text-danger" asp-validation-for="Teacher.Name"></span>
+
+            <label class="text-primary mb-1 mt-2" asp-for="Teacher.ProfileImage"></label>
+            <input type="text" class="form-control mb-2" asp-for="Teacher.ProfileImage" />
+            <span class="mb-4 text-danger" asp-validation-for="Teacher.ProfileImage"></span>
 
             <label class="text-primary mb-1 mt-2" asp-for="ReleaseTime"></label>
             <input id="persianDateTime" class="form-control mb-2" asp-for="ReleaseTime" />
