@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Delt.Models\Delt.Models.csproj" />
+    <ProjectReference Include="..\Delt.Utility\Delt.Utility.csproj" />
   </ItemGroup>
 
 </Project>

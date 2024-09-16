@@ -105,5 +105,11 @@ namespace Delt.Web.Controllers
 
             return View(blog);
         }
+
+        public async Task<IActionResult> SearchByName(string title)
+        {
+            IEnumerable<Blog> filtered = await _context.Blog.GetByFilter(x => x.Title.Contains(title));
+            return View(filtered);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Delt.DataAccess.Data;
 using Delt.DataAccess.Interfaces;
+using Delt.Utility.Checkers;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -32,6 +33,8 @@ namespace Delt.DataAccess.Repository
         {
             if (take == 0)
                 return await _dbSet.ToListAsync();
+            //if (filter.IsNull())
+            //    return await _dbSet.ToListAsync();
             return await _dbSet.Take(take).ToListAsync();
         }
 
@@ -40,6 +43,11 @@ namespace Delt.DataAccess.Repository
             IQueryable<T> query = _dbSet;
             query = query.Where(filter);
             return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetByFilter(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbSet.Where(predicate).ToListAsync();
         }
     }
 }
